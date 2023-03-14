@@ -1,0 +1,3 @@
+/Users/arnaulopez/Documents/UOC/Mtp2/PAC1/cmake-build-debug/CMakeFiles/PAC1.dir
+/Users/arnaulopez/Documents/UOC/Mtp2/PAC1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/arnaulopez/Documents/UOC/Mtp2/PAC1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
