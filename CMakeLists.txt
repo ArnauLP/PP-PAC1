@@ -3,4 +3,4 @@ project(PAC1 C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(PAC1 main.c donation.c)
+add_executable(PAC1 main.c donation.c csv.c)

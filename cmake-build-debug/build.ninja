@@ -58,6 +58,12 @@ build CMakeFiles/PAC1.dir/donation.c.o: C_COMPILER__PAC1_Debug /Users/arnaulopez
   OBJECT_DIR = CMakeFiles/PAC1.dir
   OBJECT_FILE_DIR = CMakeFiles/PAC1.dir
 
+build CMakeFiles/PAC1.dir/csv.c.o: C_COMPILER__PAC1_Debug /Users/arnaulopez/Documents/UOC/Mtp2/PAC1/csv.c || cmake_object_order_depends_target_PAC1
+  DEP_FILE = CMakeFiles/PAC1.dir/csv.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/PAC1.dir
+  OBJECT_FILE_DIR = CMakeFiles/PAC1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PAC1
@@ -66,7 +72,7 @@ build CMakeFiles/PAC1.dir/donation.c.o: C_COMPILER__PAC1_Debug /Users/arnaulopez
 #############################################
 # Link the executable PAC1
 
-build PAC1: C_EXECUTABLE_LINKER__PAC1_Debug CMakeFiles/PAC1.dir/main.c.o CMakeFiles/PAC1.dir/donation.c.o
+build PAC1: C_EXECUTABLE_LINKER__PAC1_Debug CMakeFiles/PAC1.dir/main.c.o CMakeFiles/PAC1.dir/donation.c.o CMakeFiles/PAC1.dir/csv.c.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
   OBJECT_DIR = CMakeFiles/PAC1.dir
   POST_BUILD = :
