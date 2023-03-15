@@ -41,6 +41,12 @@ int donationData_len(tDonationData data) {
 // Parse input from CSVEntry
 void donation_parse(tDonation *donation, tCSVEntry entry) {
 
+    // “12345678N;John;Smith;+34699999999;john.smith@example.com;My street, 25;08001;30/12/1980”
+    int n = entry.numFields;
+    char * buffer;
+    int lenght = 512;
+    csv_getAsString(entry,0, buffer,lenght);
+    strcpy( donation->document ,  buffer);
 }
 
 // Add a new donation
@@ -52,11 +58,11 @@ void donationData_add(tDonationData *data, tDonation donation) {
 
     // buscar lloc d'insersió
     while (i < data->n && !trobat && !repetit) {
-        if (data->donationsTable[i].projectCode == donation.projectCode &&
+        if (strcmp( data->donationsTable[i].projectCode , donation.projectCode) &&
             date_equals(data->donationsTable[i].date, donation.date) &&
             data->donationsTable[i].document == donation.document) {
             repetit = true;
-        } else if (data->donationsTable[i].projectCode > donation.projectCode) {
+        } else if (strcmp(data->donationsTable[i].projectCode , donation.projectCode)>0) {
             trobat = true;
         } else {
             i++;
@@ -75,20 +81,20 @@ void donationData_add(tDonationData *data, tDonation donation) {
 // Get a donation
 void donationData_get(tDonationData data, int index, char *buffer) {
     // TODO
-    donation_parse(&data.donationsTable[index],)
+    //donation_parse(&data.donationsTable[index],)
 
     //sprintf();
 }
 
 // Remove a donation
-void donationData_del(tDonationData *data, tDate date, int projectCode, char document[]) {
+void donationData_del(tDonationData *data, tDate date, char projectCode[], char document[]) {
     //var
     int pos;
     bool trobat = false;
     int i = 0;
     //buscar la pos a elminar
     while (i < data->n && !trobat) {
-        if (data->donationsTable[i].projectCode = projectCode && date_equals(data->donationsTable[i].date, date) &&
+        if (strcmp( data->donationsTable[i].projectCode , projectCode )&& date_equals(data->donationsTable[i].date, date) &&
                                                   strcmp(data->donationsTable[i].document, document)) {
             trobat = true;
             pos = i;

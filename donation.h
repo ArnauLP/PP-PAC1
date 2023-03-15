@@ -35,7 +35,7 @@ typedef struct {
     tDate date;
     char document[50];
     char ngo[3];
-    int projectCode;
+    char projectCode[50];
     double amount;
 }tDonation;
 
@@ -65,7 +65,7 @@ void donationData_add (tDonationData* data, tDonation donation);
 void donationData_get (tDonationData data, int index, char* buffer);
 
 // Remove a donation
-
+void donationData_del(tDonationData *data, tDate date, char projectCode[], char document[]);
 
 
 ////////////////////////////////////////////
